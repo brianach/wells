@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from map.views import mapper, popup
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('map/', mapper, name='map'),
+    path('map/popup/', popup, name='popup'),
 ]

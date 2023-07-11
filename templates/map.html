@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2>Well Locations <img
+        src="https://res.cloudinary.com/dpii8ntba/image/upload/c_scale,w_32/v1687818472/locomo/i_well_g6wr4h.png"></img>
+</h2>
+
+<div id='map' data-wells="{{ wells }}" style='width: 1920px; height: 1080px;'></div>
+
+<script src="{% static 'js/mapper.js' %}"></script>
+
+<script>
+    // Add geolocate control to the map.
+    // map.addControl(
+    //    new mapboxgl.GeolocateControl({
+    //        positionOptions: {
+    //            enableHighAccuracy: true
+    //        },
+    //        // When active the map will receive updates to the device's location as it changes.
+    //        trackUserLocation: true,
+    //        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+    //        showUserHeading: true
+    //    })
+    //);
+</script>
+
+{% endblock %}
