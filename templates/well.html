@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <!-- The post content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ well_data }}
+                    <!-- change if variable in views.py changes -->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
