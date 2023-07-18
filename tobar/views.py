@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views import generic, View
 from map.models import Well
+from .models import Post
+from .forms import CommentForm
 
 
 class WellDetail(View):
@@ -13,3 +15,10 @@ class WellDetail(View):
         # for record in well_data:
         #    addr_one = record['townland']
         # return render(request, 'well.html', context={'addr_one': addr_one})
+
+
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
+    paginate_by = 6

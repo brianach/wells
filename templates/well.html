@@ -7,8 +7,26 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
-                    {{ well_data }}
-                    <!-- change if variable in views.py changes -->
+                    {% if well_data %}
+                    {% for record in well_data %}
+                <p class="card-text">
+                    Well: {{ record.well }}
+                </p>
+                <p class="card-text">
+                    Townland: {{ record.townland }}
+                </p>
+                <p class="card-text">
+                    County: {{ record.county }}
+                </p>
+                <p class="card-text">
+                    Cures: {{ record.cures }}
+                </p>
+                {% endfor %}
+                {% else %}
+                <p class="card-text">
+                    No data available.
+                </p>
+                {% endif %}
                 </p>
             </div>
         </div>

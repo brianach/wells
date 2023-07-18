@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-brianach-wells-lrh0um22du.us2.codeanyapp.com',
                  'holy-well-55adbd417901.herokuapp.com']
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'django_summernote',
     'cloudinary',
     'about',
     'tobar',

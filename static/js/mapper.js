@@ -50,6 +50,7 @@ map.on('load', () => {
         }
     });
 
+    // Load popup when location clicked
     map.on('click', 'points', function (e) {
 
         var title = e.features[0].properties.title;
