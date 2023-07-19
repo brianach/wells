@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Well
-from tobar.models import Post
 import json
 from django.http import JsonResponse
 from django.core.serializers.json import DjangoJSONEncoder

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/static/css/popup.css">
 
 <!-- Location data -->
-<div class="popup-wrapper">
+<div id="well-popup" class="popup-wrapper">
     <div class="popup">
         <div class="popup-content">
             <img src="/static/img/h_well.png"></img>
@@ -10,7 +10,7 @@
 
             {% load static %}
 
-            <h5><a href="{% url 'popup' %}">{{ title }}</a></h5>
+            <h5>{{ title }}</a></h5>
 
             <!--<h5>{{ title }}</h5>-->
             <!--<p>{{ excerpt }}</p>-->
