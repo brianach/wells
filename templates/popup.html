@@ -6,7 +6,13 @@
         <div class="popup-content">
             <img src="/static/img/h_well.png"></img>
             <hr>
-            <h5>{{ title }}</h5>
+            <!-- post_detail.html -->
+
+            {% load static %}
+
+            <h5><a href="{% url 'popup' %}">{{ title }}</a></h5>
+
+            <!--<h5>{{ title }}</h5>-->
             <!--<p>{{ excerpt }}</p>-->
         </div>
     </div>
