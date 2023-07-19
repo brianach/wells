@@ -13,7 +13,7 @@ class Post(models.Model):
         Well, on_delete=models.CASCADE, related_name='wells', default='1')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='blog_posts')
+        User, on_delete=models.CASCADE, related_name='tobar_posts')
     featured_image = CloudinaryField('image', default='placeholder')
     cures = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
@@ -23,7 +23,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='blogpost_like', blank=True)
+        User, related_name='tobarpost_like', blank=True)
 
     class Meta:
         ordering = ["-created_on"]

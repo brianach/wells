@@ -7,7 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("tobar.urls"), name="tobar-urls"),
     path('summernote/', include('django_summernote.urls')),
-    path('wells/', include('tobar.urls'), name='tobar'),
+    # path('wells/', include('tobar.urls'), name='tobar'),
     path('map/', mapper, name='map'),
     path('map/popup/', popup, name='popup'),
 ]

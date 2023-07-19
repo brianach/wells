@@ -5,8 +5,8 @@ from django.forms import ModelForm, Textarea  # test
 from map.models import Well
 
 
-class WellInline(admin.StackedInline):
-    model = Well
+# class WellInline(admin.StackedInline):
+#    model = Well
 
 
 @admin.register(Post)
