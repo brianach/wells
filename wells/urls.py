@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from map.views import mapper, popup
+from tobar.views import PostDetail
 
 urlpatterns = [
     path('map/', mapper, name='map'),
@@ -8,5 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("tobar.urls"), name="tobar-urls"),
     path('summernote/', include('django_summernote.urls')),
+    path('well/<int:pk>/post', PostDetail.as_view(), name='post_detail'),
     # path('wells/', include('tobar.urls'), name='tobar'),
 ]

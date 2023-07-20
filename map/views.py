@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from .models import Well
+from tobar.models import Post
 import json
 from django.http import JsonResponse
 from django.core.serializers.json import DjangoJSONEncoder
+from django.urls import reverse
 
 
 def mapper(request):
@@ -11,9 +13,27 @@ def mapper(request):
 
     transposed_wells = []
     for well in wells:
+        # Fetch related 'Post' records for each 'Well'
+        posts = Post.objects.filter(well=well['id'])
+        # post_title = [post.title for post in posts]
+        # post_content = [post.content for post in posts]
+        post_data = [
+            {
+                "title": post.title,
+                # Generate the URL for 'post_detail' view
+                "url": reverse('post_detail', args=[post.id]),
+                "content": post.content,
+            }
+            for post in posts
+        ]
+
         output = {
             "type": "Feature",
-            "properties": {"title": well['well']},
+            "properties": {
+                "title": well['well'],
+                "post": post_data,
+
+            },
             "geometry": {
                 "coordinates": [float(well['longitude']), float(well['latitude'])],
                 "type": "Point"
