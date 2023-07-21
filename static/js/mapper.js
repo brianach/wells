@@ -54,17 +54,10 @@ map.on('load', () => {
     map.on('click', 'points', function (e) {
 
         var title = e.features[0].properties.title;
-
-        var post_id = e.features[0].properties.post;
-        var post_detail_url = "{% url 'post_detail' post_id %}".replace(post_id, encodeURIComponent(post_id));
-
-        var post_content = e.features[0].properties.content;
-
+        var post_slug = e.features[0].properties.post_slug.replace(/[\[\]""]/g, '');
         var coordinates = e.features[0].geometry.coordinates.slice();
         var r_coordinates = coordinates.slice().reverse(); //for exporting to google maps
-
-        //var url = 'popup?title=' + encodeURIComponent(title) + '&post_detail_url=' + post_detail_url + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
-        var url = 'popup?title=' + encodeURIComponent(title) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
+        var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
         var xhr = new XMLHttpRequest();
 
         xhr.open('GET', url);

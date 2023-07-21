@@ -15,24 +15,15 @@ def mapper(request):
     for well in wells:
         # Fetch related 'Post' records for each 'Well'
         posts = Post.objects.filter(well=well['id'])
-        # post_title = [post.title for post in posts]
-        # post_content = [post.content for post in posts]
-        post_data = [
-            {
-                "title": post.title,
-                # Generate the URL for 'post_detail' view
-                "url": reverse('post_detail', args=[post.id]),
-                "content": post.content,
-            }
-            for post in posts
-        ]
+        post_slug = [post.slug for post in posts]
+        post_content = [post.content for post in posts]
 
         output = {
             "type": "Feature",
             "properties": {
                 "title": well['well'],
-                "post": post_data,
-
+                "post_content": post_content,
+                "post_slug": post_slug,
             },
             "geometry": {
                 "coordinates": [float(well['longitude']), float(well['latitude'])],
@@ -48,7 +39,15 @@ def mapper(request):
 
 def popup(request):
     title = request.GET.get('title')
+    post_slug = request.GET.get('post_slug')
     coordinates = request.GET.get('coordinates')
-    data = {'title': title, 'content': coordinates}
-    # Render the popup template with the data
+    post_url = reverse('post_detail', args=[post_slug])
+
+    data = {
+        'title': title,
+        'post_slug': post_slug,
+        'coordinates': coordinates,
+        'post_url': post_url,
+    }
+
     return render(request, 'popup.html', data)

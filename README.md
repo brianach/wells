@@ -37,3 +37,67 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+How the Map Popup Dialog is constucted:
+
+The map page is created using the 'map.html' template. Markers are placed on the map by the JSON data sent from the 'map.mapper' view which generates the data from the Well and related Post model records.
+
+When a marker is clicked the relevant variables are passed back to the 'map.popup' view which in turn generates the data for the popup dialog. The JS line in 'mapper.js' which passes the marker details is:
+
+        var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
+
+The URL constructed in var url includes query parameters (title, post_slug, and coordinates). These query parameters are passed as part of the GET request to the server when the xhr.send() method is executed.
+this section of code creates the popup element using XMLHttpRequest to retrieve 'data' from the 'map.popup' view in this code:
+
+    xhr.open('GET', url);
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            var data = xhr.responseText; // store the response text in a variable called data
+            new mapboxgl.Popup().setLngLat(coordinates).setHTML(data).addTo(map);
+        } else {
+            console.error('Request failed.  Returned status of ' + xhr.status);
+        }
+    };
+
+The 'map.popup' view is below and you can see that the variable used match those in the 'map.mapper' view as well as the mapper.js script:
+
+    def popup(request):
+        title = request.GET.get('title')
+        post_slug = request.GET.get('post_slug')
+        coordinates = request.GET.get('coordinates')
+        post_url = reverse('post_detail', args=[post_slug])
+
+        data = {
+            'title': title,
+            'post_slug': post_slug,
+            'coordinates': coordinates,
+            'post_url': post_url,
+        }
+
+        return render(request, 'popup.html', data)
+
+The data passed back contains 'post_url' which combined with the popup title creates a link to the related marker post url defined by the 'tobar.PostDetail view below:
+
+class PostDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            "post_detail.html",
+            {
+                "post": post,
+                "location": post.location,
+                "comments": comments,
+                "liked": liked,
+            },
+        )
+
+This is the same view used for reading the posts from the home page.
