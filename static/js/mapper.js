@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
 map.on('load', () => {
 
     // Add an image to use as a custom marker
-    map.loadImage('/static/img/h_well.png',
+    map.loadImage('/static/img/well-marker.png',
         (error, image) => {
             if (error) throw error;
             map.addImage('custom-marker', image);
