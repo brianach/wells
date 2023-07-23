@@ -29,7 +29,7 @@ map.on('load', () => {
         'data': {
             'type': 'FeatureCollection',
             'features': JSON.parse(wells)
-        }
+        },
     });
 
     // Add a symbol layer
@@ -39,14 +39,17 @@ map.on('load', () => {
         'source': 'points',
         'layout': {
             'icon-image': 'custom-marker',
-            // get the title name from the source's "title" property
-            'text-field': ['get', 'well'],
+            //'text-field': ['get', 'well'],
+            'text-field': ['get', 'title'],
             'text-font': [
                 'Open Sans Semibold',
                 'Arial Unicode MS Bold'
             ],
             'text-offset': [0, 1.25],
             'text-anchor': 'top'
+        },
+        'paint': {
+            'text-color': '#000000' // Set the text color (black in this case)
         }
     });
 
@@ -54,10 +57,11 @@ map.on('load', () => {
     map.on('click', 'points', function (e) {
 
         var title = e.features[0].properties.title;
+        var excerpt = e.features[0].properties.post_excerpt.replace(/[\[\]""]/g, '');
         var post_slug = e.features[0].properties.post_slug.replace(/[\[\]""]/g, '');
         var coordinates = e.features[0].geometry.coordinates.slice();
         var r_coordinates = coordinates.slice().reverse(); //for exporting to google maps
-        var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
+        var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&excerpt=' + encodeURIComponent(excerpt) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
         var xhr = new XMLHttpRequest();
 
         xhr.open('GET', url);

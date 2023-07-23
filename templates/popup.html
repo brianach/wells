@@ -10,7 +10,9 @@
             {% load static %}
 
             <h5><a href="{{ post_url }}">{{ title }}</a></h5>
-
+            <div>
+                <p class="excerpt-textbox">{{ excerpt }}</p>
+            </div>
         </div>
     </div>
 </div>
@@ -18,7 +20,8 @@
 <!-- Google Maps Button  -->
 <div class="button-box">
     <button>
-        <a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Google Maps &nbsp
+        <a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Open location in
+            Google Maps
             &nbsp<i class="fa fa-location-arrow"></i></a>
     </button>
 </div>

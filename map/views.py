@@ -16,13 +16,13 @@ def mapper(request):
         # Fetch related 'Post' records for each 'Well'
         posts = Post.objects.filter(well=well['id'])
         post_slug = [post.slug for post in posts]
-        post_content = [post.content for post in posts]
+        post_excerpt = [post.excerpt for post in posts]
 
         output = {
             "type": "Feature",
             "properties": {
                 "title": well['well'],
-                "post_content": post_content,
+                "post_excerpt": post_excerpt,
                 "post_slug": post_slug,
             },
             "geometry": {
@@ -40,14 +40,15 @@ def mapper(request):
 def popup(request):
     title = request.GET.get('title')
     post_slug = request.GET.get('post_slug')
+    excerpt = request.GET.get('excerpt')
     coordinates = request.GET.get('coordinates')
     post_url = reverse('post_detail', args=[post_slug])
 
     data = {
         'title': title,
+        'excerpt': excerpt,
         'post_slug': post_slug,
         'coordinates': coordinates,
-        'post_url': post_url,
     }
 
     return render(request, 'popup.html', data)
