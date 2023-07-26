@@ -47,6 +47,7 @@ def popup(request):
     data = {
         'title': title,
         'excerpt': excerpt,
+        'post_url': post_url,
         'post_slug': post_slug,
         'coordinates': coordinates,
     }
