@@ -1,14 +1,14 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% block content %}
+
+<link rel="stylesheet" href="/static/css/mapbox.css">
 
 {% load static %}
-
-{% block content %}
 
 <h2>Well Locations <img
         src="https://res.cloudinary.com/dpii8ntba/image/upload/c_scale,w_32/v1687818472/locomo/i_well_g6wr4h.png"></img>
 </h2>
 
-<div data-tap-disabled="false" id='map' data-wells="{{ wells }}" style='width: 1920px; height: 1080px;'></div>
+<div class="map-content" id='map' data-wells="{{ wells }}"></div>
 
 <script src="{% static 'js/mapper.js' %}" crossorigin="anonymous"></script>
 

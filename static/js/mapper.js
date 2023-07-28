@@ -8,8 +8,6 @@ var map = new mapboxgl.Map({
 
 /* Load map and custom icons */
 
-//var image = 'https://res.cloudinary.com/dpii8ntba/image/upload/c_scale,w_32/v1687818472/locomo/i_well_g6wr4h.png';
-
 map.on('load', () => {
 
     // Add an image to use as a custom marker
