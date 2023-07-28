@@ -34,7 +34,8 @@ def mapper(request):
 
     json_wells = json.dumps(list(transposed_wells), cls=DjangoJSONEncoder)
 
-    return render(request, 'map.html', {'mapbox_access_token': mapbox_access_token, 'wells': json_wells})
+    map_page_class = True  # Set specific class on the map page header and footer
+    return render(request, 'map.html', {'map_page_class': map_page_class, 'mapbox_access_token': mapbox_access_token, 'wells': json_wells})
 
 
 def popup(request):

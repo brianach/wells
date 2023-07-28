@@ -140,3 +140,21 @@ body {
     background: transparent;
     border: none;
 }
+
+/* Mobile device styling */
+@media only screen and (max-width: 425px) {
+    .masthead {
+        height: 20vh;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .masthead {
+        height: 100vh;
+    }
+
+    .navbar {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
