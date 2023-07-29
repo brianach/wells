@@ -45,14 +45,20 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <!--<a class="nav-link" data-bs-toggle="modal" href="{% url 'account_logout' %}">Logout</a>-->
+                        <button type="button" class="nav-menu nav-link active" data-bs-toggle="modal"
+                            data-bs-target="#signout">Logout</button>
                     </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    <li class=" nav-item">
+                        <!--<a class="nav-link" href="{% url 'account_signup' %}">Register</a>-->
+                        <button type="button" class="nav-menu nav-link active" data-bs-toggle="modal"
+                            data-bs-target="#signin">Login</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <!--<a class="nav-link" href="{% url 'account_login' %}">Login</a>-->
+                        <button type="button" class="nav-menu nav-link active" data-bs-toggle="modal"
+                            data-bs-target="#signup">Register</button>
                     </li>
                     {% endif %}
 
@@ -63,6 +69,28 @@
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                {% include 'account/signup.html' %}
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                {% include 'account/login.html' %}
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="signout" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                {% include 'account/logout.html' %}
+            </div>
+        </div>
+    </div>
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
@@ -79,6 +107,7 @@
             <i class="fab fa-youtube-square ms-3"></i>
         </p>
     </footer>
+
 </body>
 
 </html>
