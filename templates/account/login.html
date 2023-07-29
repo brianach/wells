@@ -1,5 +1,4 @@
-{% load i18n %}
-{% trans "Sign In" %}
+{% load i18n %}{% load static %}
 {% block content %}
 
 <div class="container">
@@ -7,22 +6,41 @@
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the holy wells site. To leave a comment or like a post, please log in. If
-                you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}</p>
+            <p class="check-auth">{% blocktrans %}Welcome back to the holy wells
+                site. To leave a comment or like a post, please log in. If you
+                have not created an account yet, then <button type="button" class="nav-menu nav-link active"
+                    data-bs-toggle="modal" data-bs-target="#signup" onclick="shDiv()">sign up</button></a> first.
+                {% endblocktrans %}</p>
         </div>
     </div>
-    <div class="row">
+
+    <div class="row" id="viz-div">
         <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+            <form class="login" method="POST" action="/accounts/login/">
                 {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <p><label for="id_login">Username:</label> <input type="text" name="login" placeholder="Username"
+                        autocomplete="username" maxlength="150" required="" id="id_login"></p>
+                <p><label for="id_password">Password:</label> <input type="password" name="password"
+                        placeholder="Password" autocomplete="current-password" required="" id="id_password"></p>
+                <p><label for="id_remember">Remember Me:</label> <input type="checkbox" name="remember"
+                        id="id_remember">
+                </p>
+                <button class="btn btn-signup right" type="submit">Sign In</button>
             </form>
         </div>
+    </div>
+
+    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
+
+        <script>
+            function shDiv() {
+                var x = document.getElementById("viz-div");
+                x.style.display = "none";
+            }
+        </script>
+
+        {% include 'account/signup.html' %}
+
     </div>
 </div>
 {% endblock %}

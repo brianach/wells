@@ -1,29 +1,54 @@
-{% load i18n %}
+{% load i18n %}{% load static %}
 {% block content %}
 
-<div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-        <form class="signup" id="signup_form" method="post" action="/accounts/signup/">
-            {% csrf_token %}
-            <p><label for="id_username">Username:</label> <input type="text" name="username" placeholder="Username"
-                    autocomplete="username" minlength="1" maxlength="150" required="" id="id_username"></p>
-            <p><label for="id_email">E-mail (optional):</label> <input type="email" name="email"
-                    placeholder="E-mail address" autocomplete="email" maxlength="320" id="id_email"></p>
-            <ul class="errorlist">
-                <li>This field is required.</li>
-            </ul>
-            <p><label for="id_password1">Password:</label> <input type="password" name="password1"
-                    placeholder="Password" required="" id="id_password1" autocomplete="off">
-            </p>
-            <ul class="errorlist">
-                <li>This field is required.</li>
-            </ul>
-            <p><label for="id_password2">Password (again):</label> <input type="password" name="password2"
-                    placeholder="Password (again)" required="" id="id_password2" autocomplete="off"></p>
+<div class="container">
+    <div class="row" id="viz-div">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>{% trans "Sign Up" %}</h3>
 
-            <button class="btn btn-signup right" type="submit">Sign Up »</button>
-        </form>
+            <p class="check-auth">{% blocktrans %}Welcome to the holy wells site. Do you
+                already have an account? Then please <button type="button" class="nav-menu nav-link active"
+                    data-bs-toggle="modal" data-bs-target="#signin" onclick="shDiv()">Login</button> instead.
+                {%endblocktrans %}</p>
+        </div>
+    </div>
+
+    <div class="row" id="viz-div">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <form class="signup" id="signup_form" method="post" action="/accounts/signup/">
+                {% csrf_token %}
+                <p><label for="id_username">Username:</label> <input type="text" name="username" placeholder="Username"
+                        autocomplete="username" minlength="1" maxlength="150" required="" id="id_username"></p>
+                <p><label for="id_email">E-mail (optional):</label> <input type="email" name="email"
+                        placeholder="E-mail address" autocomplete="email" maxlength="320" id="id_email"></p>
+                <ul class="errorlist">
+                    <li>This field is required.</li>
+                </ul>
+                <p><label for="id_password1">Password:</label> <input type="password" name="password1"
+                        placeholder="Password" required="" id="id_password1" autocomplete="off">
+                </p>
+                <ul class="errorlist">
+                    <li>This field is required.</li>
+                </ul>
+                <p><label for="id_password2">Password (again):</label> <input type="password" name="password2"
+                        placeholder="Password (again)" required="" id="id_password2" autocomplete="off"></p>
+
+                <button class="btn btn-signup right" type="submit">Sign Up »</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
+
+        <script>
+            function shDiv() {
+                var x = document.getElementById("viz-div");
+                x.style.display = "none";
+            }
+        </script>
+
+        {% include 'account/login.html' %}
+
     </div>
 </div>
-
 {% endblock %}
