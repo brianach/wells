@@ -164,3 +164,14 @@ body {
         padding-bottom: 0%;
     }
 }
+
+/* modal customization */
+
+.modal-content {
+    padding: 50px;
+}
+
+.check-auth button {
+    display: inline-block;
+    padding: 0%;
+}

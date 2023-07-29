@@ -58,7 +58,7 @@
                     <li class="nav-item">
                         <!--<a class="nav-link" href="{% url 'account_login' %}">Login</a>-->
                         <button type="button" class="nav-menu nav-link active" data-bs-toggle="modal"
-                            data-bs-target="#signup">Register</button>
+                            data-bs-target="#authenticate">Register</button>
                     </li>
                     {% endif %}
 
@@ -70,10 +70,10 @@
         </div>
     </nav>
 
-    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+    <div class="modal fade" id="signout" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                {% include 'account/signup.html' %}
+                {% include 'account/logout.html' %}
             </div>
         </div>
     </div>
@@ -84,13 +84,14 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="signout" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
+    <div class="modal fade" id="authenticate" tabindex="-1" aria-labelledby="authenticateLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                {% include 'account/logout.html' %}
+                {% include 'account/auth.html' %}
             </div>
         </div>
     </div>
+
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
