@@ -1,4 +1,5 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9jdWFsYWluIiwiYSI6ImNsamJwOGJ4MjI4cjMzbm54YzBmeTd0ZHYifQ.mdnhGzOR0zbyhc5-SUE4Pg';
+
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
@@ -50,6 +51,16 @@ map.on('load', () => {
             'text-color': '#000000' // Set the text color (black in this case)
         }
     });
+
+    // Add geolocate control to the map.
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: { enableHighAccuracy: true },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
+    })
+    );
 
     // Load popup when location clicked
     map.on('click', 'points', function (e) {

@@ -15,7 +15,8 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='tobar_posts')
     featured_image = CloudinaryField('image', default='placeholder')
-    cures = models.CharField(max_length=100, default='autofilled on save', blank=True)
+    cures = models.CharField(
+        max_length=100, default='autofilled on save', blank=True)
     location = models.CharField(
         max_length=100, default='autofilled on save', blank=True)
     excerpt = models.TextField(blank=True)
