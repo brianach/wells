@@ -68,27 +68,35 @@
     </nav>
 
     <div class="modal fade" id="signout" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-                {% include 'account/logout.html' %}
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    {% include 'account/logout.html' %}
+                </div>
             </div>
         </div>
     </div>
     <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-                {% include 'account/login.html' %}
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    {% include 'account/login.html' %}
+                </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-                {% include 'account/signup.html' %}
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    {% include 'account/signup.html' %}
+                </div>
             </div>
         </div>
     </div>
-
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}

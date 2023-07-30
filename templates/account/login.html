@@ -9,7 +9,7 @@
             <p class="check-auth">{% blocktrans %}Welcome back to the holy wells
                 site. To leave a comment or like a post, please log in. If you
                 have not created an account yet, then <button type="button" class="nav-menu nav-link active"
-                    data-bs-toggle="modal" data-bs-target="#signup" onclick="shDiv()">sign up</button></a> first.
+                    data-bs-dismiss="modal">sign up</button></a> first.
                 {% endblocktrans %}</p>
         </div>
     </div>
@@ -30,17 +30,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signoutLabel" aria-hidden="true">
 
-        <script>
-            function shDiv() {
-                var x = document.getElementById("viz-div");
-                x.style.display = "none";
-            }
-        </script>
-
-        {% include 'account/signup.html' %}
-
-    </div>
+</div>
 </div>
 {% endblock %}

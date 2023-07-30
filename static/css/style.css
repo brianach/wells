@@ -168,8 +168,20 @@ body {
 /* modal customization */
 
 .modal-content {
-    padding: 50px;
+    padding: 25px;
 }
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: start;
+    flex-direction: row-reverse;
+}
+
+.modal-header button {
+    border: none;
+}
+
 
 .check-auth button {
     display: inline-block;
