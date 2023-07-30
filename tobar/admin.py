@@ -16,7 +16,15 @@ class PostAdmin(SummernoteModelAdmin, admin.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on')
+    prepopulated_fields = {
+        'slug': ('title',),
+    }
     summernote_fields = ('content',)
+
+    def save_model(self, request, obj, form, change):
+        obj.cures = obj.well.cures
+        obj.location = f"{obj.well.townland}, {obj.well.county}"
+        super().save_model(request, obj, form, change)
 
 
 @admin.register(Comment)

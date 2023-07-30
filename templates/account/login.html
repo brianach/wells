@@ -4,17 +4,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
+            <h3>{% trans "Login" %}</h3>
 
             <p class="check-auth">{% blocktrans %}Welcome back to the holy wells
                 site. To leave a comment or like a post, please log in. If you
                 have not created an account yet, then <button type="button" class="nav-menu nav-link active"
-                    data-bs-dismiss="modal">sign up</button></a> first.
+                    data-bs-dismiss="modal">Register</button></a> first.
                 {% endblocktrans %}</p>
         </div>
     </div>
 
-    <div class="row" id="viz-div">
+    <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <form class="login" method="POST" action="/accounts/login/">
                 {% csrf_token %}
@@ -25,12 +25,10 @@
                 <p><label for="id_remember">Remember Me:</label> <input type="checkbox" name="remember"
                         id="id_remember">
                 </p>
-                <button class="btn btn-signup right" type="submit">Sign In</button>
+                <button class="btn btn-signup right" type="submit">Login</button>
             </form>
         </div>
     </div>
-
-
 </div>
-</div>
+
 {% endblock %}

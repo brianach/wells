@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row" id="viz-div">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign Up" %}</h3>
+            <h3>{% trans "Register" %}</h3>
 
             <p class="check-auth">{% blocktrans %}Welcome to the holy wells site. Do you
                 already have an account? Then please <button type="button" class="nav-menu nav-link active"
@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <div class="row" id="viz-div">
+    <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <form class="signup" id="signup_form" method="post" action="/accounts/signup/">
                 {% csrf_token %}
@@ -33,10 +33,10 @@
                 <p><label for="id_password2">Password (again):</label> <input type="password" name="password2"
                         placeholder="Password (again)" required="" id="id_password2" autocomplete="off"></p>
 
-                <button class="btn btn-signup right" type="submit">Sign Up »</button>
+                <button class="btn btn-signup right" type="submit">Register</button>
             </form>
         </div>
     </div>
-
 </div>
+
 {% endblock %}
