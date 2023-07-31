@@ -84,17 +84,16 @@ map.on('load', () => {
             if (xhr.status === 200) {
                 var data = xhr.responseText;
                 new mapboxgl.Popup().setLngLat(coordinates).setHTML(data).addTo(map);
-                if (post_slug == 'undefined') {
+
+                if (post_slug == 'undefined') { //remove link if undefined
                     var popupElement = document.querySelector('.mapboxgl-popup-content');
                     var myUrlElement = popupElement.querySelector('#post_url');
-
                     if (myUrlElement) {
-                        // Remove or modify the href attribute to make the link non-functional
                         myUrlElement.removeAttribute("href");
-                        // Optionally, add a class to apply a specific visual style for disabled links
                         myUrlElement.classList.add("disabled-link");
                     }
                 }
+
             } else {
                 console.error('Request failed.  Returned status of ' + xhr.status);
             }

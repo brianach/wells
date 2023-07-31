@@ -1,0 +1,44 @@
+{
+  "name": "diff",
+  "displayName": "Diff Language Basics (built-in)",
+  "description": "Provides syntax highlighting & bracket matching in Diff files.",
+  "version": "1.70.2",
+  "publisher": "vscode",
+  "license": "SEE LICENSE IN LICENSE-vscode.txt",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "scripts": {},
+  "contributes": {
+    "languages": [
+      {
+        "id": "diff",
+        "aliases": [
+          "Diff",
+          "diff"
+        ],
+        "extensions": [
+          ".diff",
+          ".patch",
+          ".rej"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "diff",
+        "scopeName": "source.diff",
+        "path": "./syntaxes/diff.tmLanguage.json"
+      }
+    ]
+  },
+  "keywords": [
+    "Built-in"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-theia/vscode-builtin-extensions"
+  },
+  "preview": false
+}

@@ -1,0 +1,22 @@
+{
+    "name": "ca-dark-theme",
+    "publisher": "Codeanywhere",
+    "displayName": "ca-dark-theme",
+    "description": "",
+    "version": "0.2.5",
+    "engines": { 
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Codeanywhere Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Dark-color-theme.json"
+            }
+        ]
+    }
+}

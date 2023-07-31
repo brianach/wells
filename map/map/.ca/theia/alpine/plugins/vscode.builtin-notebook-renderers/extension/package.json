@@ -1,0 +1,56 @@
+{
+  "name": "builtin-notebook-renderers",
+  "displayName": "Builtin Notebook Output Renderers (built-in)",
+  "description": "Provides basic output renderers for notebooks",
+  "publisher": "vscode",
+  "version": "1.70.2",
+  "license": "SEE LICENSE IN LICENSE-vscode.txt",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "notebookRenderer": [
+      {
+        "id": "vscode.builtin-renderer",
+        "entrypoint": "./renderer-out/index.js",
+        "displayName": "VS Code Builtin Notebook Output Renderer",
+        "requiresMessaging": "never",
+        "mimeTypes": [
+          "image/gif",
+          "image/png",
+          "image/jpeg",
+          "image/git",
+          "image/svg+xml",
+          "text/html",
+          "application/javascript",
+          "application/vnd.code.notebook.error",
+          "application/vnd.code.notebook.stdout",
+          "application/x.notebook.stdout",
+          "application/x.notebook.stream",
+          "application/vnd.code.notebook.stderr",
+          "application/x.notebook.stderr",
+          "text/plain"
+        ]
+      }
+    ]
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode-notebook-renderer": "^1.60.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-theia/vscode-builtin-extensions"
+  },
+  "keywords": [
+    "Built-in"
+  ],
+  "preview": false
+}

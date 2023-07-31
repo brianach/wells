@@ -1,0 +1,104 @@
+{
+  "private": true,
+  "name": "@codeanywhere/theia-ide-base",
+  "version": "12.18.1",
+  "theia": {
+    "frontend": {
+      "config": {
+        "applicationName": "Codeanywhere",
+        "defaultIconTheme": "theia-file-icons",
+        "defaultTheme": "Codeanywhere Dark",
+        "preferences": {
+          "files.enableTrash": false,
+          "ruby.useLanguageServer": true,
+          "php.suggest.basic": false,
+          "python.jediEnabled": false,
+          "http.proxySupport": "off"
+        },
+        "warnOnPotentiallyInsecureHostPattern": false
+      }
+    },
+    "backend": {
+      "config": {
+        "warnOnPotentiallyInsecureHostPattern": false
+      }
+    }
+  },
+  "dependencies": {
+    "@codeanywhere/theia-ca-about-us": "^12.12.0",
+    "@codeanywhere/theia-ca-base-config": "^12.18.1",
+    "@codeanywhere/theia-ca-branding": "^12.12.0",
+    "@codeanywhere/theia-ca-mini-browser": "^12.12.0",
+    "@codeanywhere/theia-code-runner-config": "^12.12.0",
+    "@codeanywhere/theia-init-file-open": "^12.12.0",
+    "@codeanywhere/theia-ports": "^12.12.0",
+    "@codeanywhere/theia-remove-workspace-menus": "^12.12.0",
+    "@codeanywhere/theia-shareit": "^12.12.0",
+    "@codeanywhere/theia-workspace-id-from-url-getter": "^12.12.0",
+    "@codeanywhere/theia-workspace-keep-alive": "^12.12.0",
+    "@theia/bulk-edit": "1.37.1",
+    "@theia/callhierarchy": "1.37.1",
+    "@theia/cli": "1.37.1",
+    "@theia/console": "1.37.1",
+    "@theia/core": "1.37.1",
+    "@theia/debug": "1.37.1",
+    "@theia/editor": "1.37.1",
+    "@theia/editor-preview": "1.37.1",
+    "@theia/file-search": "1.37.1",
+    "@theia/filesystem": "1.37.1",
+    "@theia/getting-started": "1.37.1",
+    "@theia/git": "1.37.1",
+    "@theia/keymaps": "1.37.1",
+    "@theia/markers": "1.37.1",
+    "@theia/memory-inspector": "1.37.1",
+    "@theia/messages": "1.37.1",
+    "@theia/metrics": "1.37.1",
+    "@theia/mini-browser": "1.37.1",
+    "@theia/monaco": "1.37.1",
+    "@theia/navigator": "1.37.1",
+    "@theia/outline-view": "1.37.1",
+    "@theia/output": "1.37.1",
+    "@theia/plugin-dev": "1.37.1",
+    "@theia/plugin-ext": "1.37.1",
+    "@theia/plugin-ext-vscode": "1.37.1",
+    "@theia/plugin-metrics": "1.37.1",
+    "@theia/preferences": "1.37.1",
+    "@theia/preview": "1.37.1",
+    "@theia/process": "1.37.1",
+    "@theia/property-view": "1.37.1",
+    "@theia/scm": "1.37.1",
+    "@theia/scm-extra": "1.37.1",
+    "@theia/search-in-workspace": "1.37.1",
+    "@theia/task": "1.37.1",
+    "@theia/terminal": "1.37.1",
+    "@theia/timeline": "1.37.1",
+    "@theia/toolbar": "1.37.1",
+    "@theia/typehierarchy": "1.37.1",
+    "@theia/userstorage": "1.37.1",
+    "@theia/variable-resolver": "1.37.1",
+    "@theia/vsx-registry": "1.37.1",
+    "@theia/workspace": "1.37.1",
+    "node-gyp": "^8.3.0",
+    "url": "0.11.0"
+  },
+  "theiaPluginsDir": "plugins",
+  "theiaPlugins": {
+    "vscode-ca-dark-theme": "https://ca-theia.s3-us-west-2.amazonaws.com/ca-dark-theme-0.2.5.vsix",
+    "vscode-builtin-extensions-pack": "https://open-vsx.org/api/eclipse-theia/builtin-extension-pack/1.70.2/file/eclipse-theia.builtin-extension-pack-1.70.2.vsix"
+  },
+  "devDependencies": {
+    "webpack-merge": "5.8.0"
+  },
+  "theiaPluginsExcludeIds": [
+    "vscode.extension-editing",
+    "vscode.git",
+    "vscode.git-ui",
+    "vscode.github",
+    "vscode.github-authentication",
+    "vscode.microsoft-authentication",
+    "ms-vscode.js-debug-companion"
+  ],
+  "resolutions": {
+    "**/msgpackr": "1.8.3"
+  }
+}

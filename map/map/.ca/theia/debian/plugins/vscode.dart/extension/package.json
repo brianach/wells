@@ -1,0 +1,41 @@
+{
+  "name": "dart",
+  "displayName": "Dart Language Basics (built-in)",
+  "description": "Provides syntax highlighting & bracket matching in Dart files.",
+  "version": "1.70.2",
+  "publisher": "vscode",
+  "license": "SEE LICENSE IN LICENSE-vscode.txt",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "scripts": {},
+  "contributes": {
+    "languages": [
+      {
+        "id": "dart",
+        "extensions": [
+          ".dart"
+        ],
+        "aliases": [
+          "Dart"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dart",
+        "scopeName": "source.dart",
+        "path": "./syntaxes/dart.tmLanguage.json"
+      }
+    ]
+  },
+  "keywords": [
+    "Built-in"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-theia/vscode-builtin-extensions"
+  },
+  "preview": false
+}
