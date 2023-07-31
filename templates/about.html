@@ -1,10 +1,13 @@
-{% extends "base.html" %}
-
+{% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<div class="container mt-5">
 
-<div class="container-fluid">
-    <div class="row">
-        <div>
-        </div>
+    <img src="{{ about.about_image.url }}" width="100%"> St. Brigids Well, County Clare. Painted by George Petrie, 1830.
+    <hr>
 
-        {%endblock%}
+    <h2>{{ about.title }}</h2>
+    {{ about.content | safe }}
+
+</div>
+{% endblock content %}
