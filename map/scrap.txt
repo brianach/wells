@@ -100,3 +100,8 @@ Rephrasing the last question: The json data is getting to map.js and I need to m
 
 
 Can you do that withoug any additional lines. Just using the 'var url =' line above.
+
+
+        if (post_slug == "undefined") {
+            document.getElementById("post_url").disabled = true;
+        }

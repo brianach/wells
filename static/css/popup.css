@@ -65,3 +65,10 @@
     text-decoration: none;
     color: rgb(168, 109, 0);
 }
+
+.disabled-link {
+    pointer-events: none;
+    text-decoration: none;
+    color: #211611;
+    cursor: default;
+}

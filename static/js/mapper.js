@@ -67,7 +67,13 @@ map.on('load', () => {
 
         var title = e.features[0].properties.title;
         var excerpt = e.features[0].properties.post_excerpt.replace(/[\[\]""]/g, '');
+        if (excerpt == '') {
+            excerpt = 'No information available for ' + title;
+        }
         var post_slug = e.features[0].properties.post_slug.replace(/[\[\]""]/g, '');
+        if (post_slug == '') {
+            post_slug = 'undefined';
+        }
         var coordinates = e.features[0].geometry.coordinates.slice();
         var r_coordinates = coordinates.slice().reverse(); //for exporting to google maps
         var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&excerpt=' + encodeURIComponent(excerpt) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
@@ -78,6 +84,17 @@ map.on('load', () => {
             if (xhr.status === 200) {
                 var data = xhr.responseText;
                 new mapboxgl.Popup().setLngLat(coordinates).setHTML(data).addTo(map);
+                if (post_slug == 'undefined') {
+                    var popupElement = document.querySelector('.mapboxgl-popup-content');
+                    var myUrlElement = popupElement.querySelector('#post_url');
+
+                    if (myUrlElement) {
+                        // Remove or modify the href attribute to make the link non-functional
+                        myUrlElement.removeAttribute("href");
+                        // Optionally, add a class to apply a specific visual style for disabled links
+                        myUrlElement.classList.add("disabled-link");
+                    }
+                }
             } else {
                 console.error('Request failed.  Returned status of ' + xhr.status);
             }

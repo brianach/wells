@@ -13,10 +13,15 @@ def mapper(request):
 
     transposed_wells = []
     for well in wells:
-        # Fetch related 'Post' records for each 'Well'
-        posts = Post.objects.filter(well=well['id'])
-        post_slug = [post.slug for post in posts]
-        post_excerpt = [post.excerpt for post in posts]
+        try:
+            # Fetch related 'Post' records for each 'Well'
+            posts = Post.objects.filter(well=well['id'])
+            post_slug = [post.slug for post in posts]
+            post_excerpt = [post.excerpt for post in posts]
+        except ObjectDoesNotExist:
+            # Handle the case when no related 'Post' record is found
+            post_slug = None
+            post_excerpt = []
 
         output = {
             "type": "Feature",
@@ -45,11 +50,15 @@ def popup(request):
     coordinates = request.GET.get('coordinates')
     post_url = reverse('post_detail', args=[post_slug])
 
+    # if post_slug != 'undefined':
+    #    post_url = reverse('post_detail', args=[post_slug])
+    # else:
+    #    post_url = '#'
+
     data = {
         'title': title,
         'excerpt': excerpt,
         'post_url': post_url,
-        'post_slug': post_slug,
         'coordinates': coordinates,
     }
 
