@@ -30,11 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-brianach-wells-lrh0um22du.us2.codeanyapp.com',
-<<<<<<< HEAD
                  'tobar-c8c7dcc15408.herokuapp.com']
-=======
-                 'tobar-b951d79eccc9.herokuapp.com']
->>>>>>> 820b149 (retry deployment)
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
