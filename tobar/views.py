@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.contrib import messages
-# from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect
 # from map.models import Well
 from .models import Post
 from .forms import CommentForm
@@ -71,7 +71,7 @@ def post_like(request, slug, *args, **kwargs):
 
 def comment_delete(request, slug, comment_id, *args, **kwargs):
 
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.filter(status=1, slug=slug)
     post = get_object_or_404(queryset)
     comment = post.comments.filter(id=comment_id).first()
 

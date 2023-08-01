@@ -111,26 +111,21 @@ body {
     color: lightgray;
 }
 
-.btn-signup {
+.btn-signup,
+.btn-edit {
     background-color: #23BBBB;
     color: #fff;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
     color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
 }
 
 .btn-like {
@@ -144,6 +139,17 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
 }
 
 .faded {
