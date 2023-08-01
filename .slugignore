@@ -1,6 +1,10 @@
 README.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 package-lock.json
+=======
+.theia
+>>>>>>> 820b149 (retry deployment)
 =======
 .theia
 >>>>>>> 820b149 (retry deployment)
