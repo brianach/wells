@@ -29,8 +29,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['8000-brianach-wells-w6zwmf4fpf.us2.codeanyapp.com',
                  'holy-well-55adbd417901.herokuapp.com']
+=======
+ALLOWED_HOSTS = ['8000-brianach-wells-lrh0um22du.us2.codeanyapp.com',
+                 'tobar-b951d79eccc9.herokuapp.com']
+>>>>>>> 820b149 (retry deployment)
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
