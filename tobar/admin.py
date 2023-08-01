@@ -1,12 +1,8 @@
 from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
-from django.forms import ModelForm, Textarea  # test
 from map.models import Well
-
-
-# class WellInline(admin.StackedInline):
-#    model = Well
+# from .forms import CommentForm
 
 
 @admin.register(Post)

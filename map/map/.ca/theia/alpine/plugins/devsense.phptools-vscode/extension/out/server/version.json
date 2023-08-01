@@ -1,5 +1,0 @@
-{
-    "target": "alpine-x64",
-    "runtime": "linux-musl-x64",
-    "version": "1.25.11606"
-}
