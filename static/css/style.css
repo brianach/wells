@@ -128,6 +128,10 @@ body {
     color: #23BBBB;
 }
 
+.btn-close {
+    display: none;
+}
+
 .btn-like {
     color: #E84610;
     border: none;
