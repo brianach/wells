@@ -1,12 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Wells logo](static/img/well.png) 
 
-Welcome,
+# Wells 
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Wells is a location enabled application dedicated to providing information and navigation directions to ancient water sources, latterly referred to as 'holy wells'.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+All users have access to all the available information contained in the app as well as a handy location enabled map with markers to all the well locations in the database. In addition to the markers, some wells have separate information pages which can be accessed from the home page or from the map locations themselves via marker popup.
 
-## Codeanywhere Reminders
+Registered users can like or add comments to any of the linked information pages and in addition, they can edit or delete their own comments but not comments made by other users. Staff users have the ability to moderate (approve) comments, can add information pages for wells which exist in the database and in cases where there is no existing record, can also add well location records to the database.
+
+Each well record in the database includes the name of the well, the townland and county, the longitude and latitude, and cures associated with the well.
+
+---
+
+# Table of Contents
+
+- [Features](#features)
+    - [Home Page](#home-page)
+    - [About Page](#about-page)
+    - [Map Page](#map-page)
+    - [Authentication](#authentication)
+
+- [Design](#design)
+- [User Experiece](#user-experience)
+- [Testing](#testing)
+- [Technologies](#technologies)
+- [Credits](#credits)
+
+---
+
+## Features
+### Home Page
+### About Page
+### Map Page
+### Authentication
+---
+## Design
+### Home Page
+### About Page
+### Map Page
+### Authentication
+---
+## User Experience
+---
+## Testing
+---
+## Technologies
+---
+## Credits
+
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 

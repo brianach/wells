@@ -8,7 +8,7 @@ var submitButton = document.getElementById("submitButton");
 
 // empty the comment text after post
 
-commentText.value = "";
+//commentText.value = "";
 
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
