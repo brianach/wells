@@ -21,6 +21,11 @@ Each well record in the database includes the name of the well, the townland and
     - [Authentication](#authentication)
 
 - [Design](#design)
+    - [Home](#home)
+    - [About](#about)
+    - [Map](#map)
+    - [User Authentication](#user-authentication)
+
 - [User Experiece](#user-experience)
 - [Testing](#testing)
 - [Technologies](#technologies)
@@ -28,25 +33,44 @@ Each well record in the database includes the name of the well, the townland and
 
 ---
 
-## Features
-### Home Page
-### About Page
-### Map Page
-### Authentication
+# Features
+## Home Page
+## About Page
+## Map Page
+## Authentication
 ---
-## Design
-### Home Page
-### About Page
-### Map Page
-### Authentication
+# Design
+## Home
+## About
+## Map
+## User Authentication
 ---
-## User Experience
+# User Experience
+
+## User Stories
+
+User stories were created to aid in the planning of the site and for the agile tasks in the implementation of the applicationh.
+
+- As a staff user I can create location records so that markers will be available on the map
+- As a staff user I can create a post so that users can get information about a well
+- As a user I can read posts on the home page
+- As a user I can read an about page to get some background 
+- As a user I can access a map page to see where wells are located
+- As a user I can click on a well marker to get more details
+- As a user I can click on the popup title to read more information
+- As a user I can click on a button in the popup to see the location and navigate to it in google maps
+- As a user I can register so that I can post comments
+- As a user I can like or unlike posts
+- As a user I can add comments to well information pages
+- As a site user I can edit or delete my own comments
+
+
 ---
-## Testing
+# Testing
 ---
-## Technologies
+# Technologies
 ---
-## Credits
+# Credits
 
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
