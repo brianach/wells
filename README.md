@@ -47,11 +47,21 @@ Each well record in the database includes the name of the well, the townland and
 
 ## Home Page
 
+The home page contains links to pages with information and details about any wells for which a linked page exists. Not all wells have detailed information pages but every information page must have a corresponding well entry.
+
+Each entry has a photograph of its related well and contains the author's name. Each post displays a brief excerpt from the page contents and the date on which the content page was created followed by a like (heart) icon, showing the numbber of page likes.
+
 ## About Page
+
+The about page shows a historic painting depicing one of the wells and a general background or history of the subject matter.
 
 ## Map Page
 
+The map page displays a scrollable and zoomable map with markers indicating the location of each well. Clicking the markers results in a popup with a link to the well information page, where one exists, and a button which when clicked open google maps centered on the related location marker. The user can then click on the 'directions' button in google maps to navigate to the entry from their current or chosen location.
+
 ## Authentication
+
+Users can register an account in order to comment on the information pages. Existing users can login and logout and are presented with a link to login if they have not already done so or to logout if they are already logged in. 
 
 ---
 
@@ -69,7 +79,7 @@ Each well record in the database includes the name of the well, the townland and
 
 # User Experience
 
-User stories were created to aid in the planning of the site and for the agile tasks in the implementation of the applicationh.
+User stories were created to aid in the planning of the site and for the agile tasks for the application project.
 
 - As a staff user I can create location records so that markers will be available on the map
 - As a staff user I can create a post so that users can get information about a well
@@ -90,7 +100,7 @@ User stories were created to aid in the planning of the site and for the agile t
 
 ## User Stories
 
-Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A taks may have dependencies which must be complete or in place in order for the current task to be completed. An example of this is shown here.
+Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A task may have dependencies which must be in place in order for the current task to be completed. An example of this is shown here.
 
 <details>
 <summary>Agile-Task</summary>
