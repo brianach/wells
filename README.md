@@ -1,6 +1,6 @@
-![Wells logo](static/img/well.png) 
+![Wells logo](static/img/well.png)
 
-# Wells 
+# Wells
 
 Wells is a location enabled application dedicated to providing information and navigation directions to ancient water sources, latterly referred to as 'holy wells'.
 
@@ -15,46 +15,66 @@ Each well record in the database includes the name of the well, the townland and
 # Table of Contents
 
 - [Features](#features)
-    - [Home Page](#home-page)
-    - [About Page](#about-page)
-    - [Map Page](#map-page)
-    - [Authentication](#authentication)
+
+  - [Home Page](#home-page)
+  - [About Page](#about-page)
+  - [Map Page](#map-page)
+  - [Authentication](#authentication)
 
 - [Design](#design)
-    - [Home](#home)
-    - [About](#about)
-    - [Map](#map)
-    - [User Authentication](#user-authentication)
+
+  - [Home](#home)
+  - [About](#about)
+  - [Map](#map)
+  - [User Authentication](#user-authentication)
 
 - [User Experiece](#user-experience)
+
 - [Testing](#testing)
+
+  - [User Stories](#user-stories)
+  - [Desktop](#desktop)
+  - [Tablet](#tablet)
+  - [Mobile](#mobile)
+
 - [Technologies](#technologies)
+
 - [Credits](#credits)
 
 ---
 
 # Features
-## Home Page
-## About Page
-## Map Page
-## Authentication
----
-# Design
-## Home
-## About
-## Map
-## User Authentication
----
-# User Experience
 
-## User Stories
+## Home Page
+
+## About Page
+
+## Map Page
+
+## Authentication
+
+---
+
+# Design
+
+## Home
+
+## About
+
+## Map
+
+## User Authentication
+
+---
+
+# User Experience
 
 User stories were created to aid in the planning of the site and for the agile tasks in the implementation of the applicationh.
 
 - As a staff user I can create location records so that markers will be available on the map
 - As a staff user I can create a post so that users can get information about a well
 - As a user I can read posts on the home page
-- As a user I can read an about page to get some background 
+- As a user I can read an about page to get some background
 - As a user I can access a map page to see where wells are located
 - As a user I can click on a well marker to get more details
 - As a user I can click on the popup title to read more information
@@ -64,14 +84,34 @@ User stories were created to aid in the planning of the site and for the agile t
 - As a user I can add comments to well information pages
 - As a site user I can edit or delete my own comments
 
-
 ---
+
 # Testing
----
-# Technologies
----
-# Credits
 
+## User Stories
+
+Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A taks may have dependencies which must be complete or in place in order for the current task to be completed. An example of this is shown here.
+
+<details>
+<summary>Agile-Task</summary>
+
+![Agile-Task](medis/docs/agile-task.png)
+
+</details>
+
+## Desktop
+
+## Tablet
+
+## Mobile
+
+---
+
+# Technologies
+
+---
+
+# Credits
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
