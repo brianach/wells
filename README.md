@@ -47,6 +47,8 @@ Each well record in the database includes the name of the well, the townland and
     - [About Page](#about-page-3)
     - [Map Page](#map-page-3)
     - [Authentication](#authentication-3)
+  - [Map Interaction](#map-interaction)
+    - [Popup Title](#popup-title)
 - [Technologies](#technologies)
 - [Credits](#credits)
 - [Notes](#notes)
@@ -121,6 +123,8 @@ Each user story has its own Agile task. In this way the implementation and the t
 </details>
 
 The following screenshots show the result of user actions on the various platforms. First we see the screenshots of various menu choices and internal content interactions for desktop or laptop devices, followed respectively by tablet devices and finally mobile phone devices. The testing indicates that content and pages are accessible on all formats.
+
+&nbsp;
 
 ## Desktop
 
@@ -383,8 +387,6 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 
 </details>
 
-
-
 ### Authentication
 
 <details>
@@ -410,7 +412,45 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 
 </details>
 
+&nbsp;
+
+
+## Map Interaction
+
+The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it the python and javascript all ties together.
+
+The marker popup works the exact same on all devices and consists of two main elements. 
+
+### Popup Title
+
+The popup title is an active link when there a related content record in the database and a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. By clicking on the <span style="color: rgb(168, 109, 0);"> *'open location in google maps'* </span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
+
+<details>
+<summary>Popup Title</summary>
+
+![Home](media/lap/popup-lnk1.png)
+
+</details>
+
+<details>
+<summary>Google Map Link</summary>
+
+![Home](media/lap/popup-lnk2.png)
+
+</details>
+
+<details>
+<summary>Google Map Window</summary>
+
+![Home](media/lap/gmap.png)
+
+</details>
+
+&nbsp;
+
 ---
+
+
 
 # Technologies
 
