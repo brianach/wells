@@ -36,7 +36,17 @@ Each well record in the database includes the name of the well, the townland and
     - [Map Page](#map-page-1)
     - [Authentication](#authentication-1)
   - [Tablet](#tablet)
+      - [Content Page](#content-page-1)
+      - [Comments](#comments-1)
+    - [About Page](#about-page-2)
+    - [Map Page](#map-page-2)
+    - [Authentication](#authentication-2)
   - [Mobile](#mobile)
+      - [Content Page](#content-page-2)
+      - [Comments](#comments-2)
+    - [About Page](#about-page-3)
+    - [Map Page](#map-page-3)
+    - [Authentication](#authentication-3)
 - [Technologies](#technologies)
 - [Credits](#credits)
 - [Notes](#notes)
@@ -206,9 +216,199 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 
 </details>
 
+&nbsp;
+
 ## Tablet
 
+<details>
+<summary>Home Page</summary>
+
+![Home](media/tab/home-tab.png)
+
+</details>
+
+#### Content Page
+
+On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
+
+<details>
+<summary>Content Page</summary>
+
+![Home](media/tab/content-tab.png)
+
+</details>
+
+#### Comments
+
+Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
+
+<details>
+<summary>Post Comment
+
+</summary>
+
+![Home](media/tab/comment-tab1.png)
+
+</details>
+
+<details>
+<summary>Edit Comment
+
+</summary>
+
+![Home](media/tab/comment-tab2.png)
+
+</details>
+
+<details>
+<summary>Delete Comment
+
+</summary>
+
+![Home](media/tab/comment-tab3.png)
+
+</details>
+
+### About Page
+
+<details>
+<summary>About Page</summary>
+
+![Home](media/tab/about-tab.png)
+
+</details>
+
+### Map Page
+
+<details>
+<summary>Map Page</summary>
+
+![Home](media/tab/map-tab.png)
+
+</details>
+
+### Authentication
+
+<details>
+<summary>Login Modal</summary>
+
+![Home](media/tab/login-tab.png)
+
+</details>
+
+
+<details>
+<summary>Logout Modal</summary>
+
+![Home](media/tab/logout-tab.png)
+
+</details>
+
+
+<details>
+<summary>Register Modal</summary>
+
+![Home](media/tab/reg-tab.png)
+
+</details>
+
+&nbsp;
+
 ## Mobile
+
+<details>
+<summary>Home Page</summary>
+
+![Home](media/mob/home-mob.png)
+
+</details>
+
+#### Content Page
+
+On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
+
+<details>
+<summary>Content Page</summary>
+
+![Home](media/mob/content-mob.png)
+
+</details>
+
+#### Comments
+
+Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
+
+<details>
+<summary>Post Comment
+
+</summary>
+
+![Home](media/mob/comment-mob1.png)
+
+</details>
+
+<details>
+<summary>Edit Comment
+
+</summary>
+
+![Home](media/mob/comment-mob2.png)
+
+</details>
+
+<details>
+<summary>Delete Comment
+
+</summary>
+
+![Home](media/mob/comment-mob3.png)
+
+</details>
+
+### About Page
+
+<details>
+<summary>About Page</summary>
+
+![Home](media/mob/about-mob.png)
+
+</details>
+
+### Map Page
+
+<details>
+<summary>Map Page</summary>
+
+![Home](media/mob/map-mob.png)
+
+</details>
+
+
+
+### Authentication
+
+<details>
+<summary>Login Modal</summary>
+
+![Home](media/mob/login-mob.png)
+
+</details>
+
+
+<details>
+<summary>Logout Modal</summary>
+
+![Home](media/mob/logout-mob.png)
+
+</details>
+
+
+<details>
+<summary>Register Modal</summary>
+
+![Home](media/mob/reg-mob.png)
+
+</details>
 
 ---
 
