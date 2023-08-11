@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 my-auto form-container text-center rounded mx-auto my-2 py-2">
+            <h1>Error 500: Internal Server Error. <i class="fa-solid fa-triangle-exclamation"></i></h1>
+            <div>
+                <img src="/static/img/system-failure.jpg">
+            </div>
+            <div>
+                <a href="{% url 'home' %}" class="btn btn-warning">
+                    Please click here to return to the home page.
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- font awesome script -->
+<script src="https://kit.fontawesome.com/559cadc1ae.js" crossorigin="anonymous"></script>
+
+{% endblock %}

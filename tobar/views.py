@@ -105,3 +105,4 @@ def comment_edit(request, slug, comment_id, *args, **kwargs):
                                  'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
