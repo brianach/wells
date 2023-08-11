@@ -1,6 +1,6 @@
-![Wells logo](static/img/well.png)
-
 # Wells
+
+![Wells logo](static/img/well.png)
 
 Wells is a location enabled application dedicated to providing information and navigation directions to ancient water sources, latterly referred to as 'holy wells'.
 
@@ -30,7 +30,11 @@ Each well record in the database includes the name of the well, the townland and
 - [Testing](#testing)
   - [User Stories](#user-stories)
   - [Desktop](#desktop)
-    - [Content Page](#content-page)
+      - [Content Page](#content-page)
+      - [Comments](#comments)
+    - [About Page](#about-page-1)
+    - [Map Page](#map-page-1)
+    - [Authentication](#authentication-1)
   - [Tablet](#tablet)
   - [Mobile](#mobile)
 - [Technologies](#technologies)
@@ -58,7 +62,7 @@ The map page displays a scrollable and zoomable map with markers indicating the 
 
 ## Authentication
 
-Users can register an account in order to comment on the information pages. Existing users can login and logout and are presented with a link to login if they have not already done so or to logout if they are already logged in. 
+Users can register an account in order to comment on the information pages. Existing users can login and logout and are presented with a link to login if they have not already done so or to logout if they are already logged in.
 
 ---
 
@@ -106,21 +110,99 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 </details>
 
+The following screenshots show the result of user actions on the various platforms. First we see the screenshots of various menu choices and internal content interactions for desktop or laptop devices, followed respectively by tablet devices and finally mobile phone devices. The testing indicates that content and pages are accessible on all formats.
+
 ## Desktop
 
 <details>
 <summary>Home Page</summary>
 
-![Home](media/opera-browser-home.png)
+![Home](media/lap/home.png)
 
 </details>
 
-### Content Page
+#### Content Page
+
+On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
 
 <details>
 <summary>Content Page</summary>
 
-![Home](media/post-content.png)
+![Home](media/lap/content.png)
+
+</details>
+
+#### Comments
+
+Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
+
+<details>
+<summary>Post Comment
+
+</summary>
+
+![Home](media/lap/comment-1.png)
+
+</details>
+
+<details>
+<summary>Edit Comment
+
+</summary>
+
+![Home](media/lap/comment-2.png)
+
+</details>
+
+<details>
+<summary>Delete Comment
+
+</summary>
+
+![Home](media/lap/comment-3.png)
+
+</details>
+
+### About Page
+
+<details>
+<summary>About Page</summary>
+
+![Home](media/lap/about.png)
+
+</details>
+
+### Map Page
+
+<details>
+<summary>Map Page</summary>
+
+![Home](media/lap/map.png)
+
+</details>
+
+### Authentication
+
+<details>
+<summary>Login Modal</summary>
+
+![Home](media/lap/login.png)
+
+</details>
+
+
+<details>
+<summary>Logout Modal</summary>
+
+![Home](media/lap/logout.png)
+
+</details>
+
+
+<details>
+<summary>Register Modal</summary>
+
+![Home](media/lap/register.png)
 
 </details>
 
@@ -137,7 +219,6 @@ Each user story has its own Agile task. In this way the implementation and the t
 # Credits
 
 ---
-
 
 # Notes
 
