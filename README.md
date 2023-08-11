@@ -48,7 +48,6 @@ Each well record in the database includes the name of the well, the townland and
     - [Map Page](#map-page-3)
     - [Authentication](#authentication-3)
   - [Map Interaction](#map-interaction)
-    - [Popup Title](#popup-title)
 - [Technologies](#technologies)
 - [Credits](#credits)
 - [Notes](#notes)
@@ -417,13 +416,9 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 
 ## Map Interaction
 
-The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it the python and javascript all ties together.
+The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it the python and javascript all ties together. The marker popup works in the same way on all devices and consists of three elements, Popup Title, Excerpt and a Google Maps Link to the loction.
 
-The marker popup works the exact same on all devices and consists of two main elements. 
-
-### Popup Title
-
-The popup title is an active link when there a related content record in the database and a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. By clicking on the <span style="color: rgb(168, 109, 0);"> *'open location in google maps'* </span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
+The popup title is becomes an active link when there a related content record in the database or a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in google maps'*</span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
 
 <details>
 <summary>Popup Title</summary>
@@ -450,8 +445,6 @@ The popup title is an active link when there a related content record in the dat
 
 ---
 
-
-
 # Technologies
 
 ---
@@ -462,7 +455,10 @@ The popup title is an active link when there a related content record in the dat
 
 # Notes
 
+&nbsp;
+
 ## Map Popup Dialog
+
 
 The map page is created using the 'map.html' template. Markers are placed on the map by the JSON data sent from the 'map.mapper' view which generates the data from the Well and related Post model records. When a marker is clicked the relevant variables are passed back to the 'map.popup' view which in turn generates the data for the popup dialog. The JS line in 'mapper.js' which passes the marker details is:
 
