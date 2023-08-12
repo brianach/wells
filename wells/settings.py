@@ -13,8 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
+
 if os.path.isfile('env.py'):
     import env
 
@@ -29,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-brianach-wells-blwm5a24fm.us2.codeanyapp.com',
                  'tobar-c8c7dcc15408.herokuapp.com']
