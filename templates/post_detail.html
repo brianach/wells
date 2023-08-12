@@ -34,8 +34,9 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
-                <div class="row">
 
+                <div class="row">
+                    <!-- Start Post Likes Section -->
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -54,15 +55,17 @@
                             {% endif %}
                             <span class="text-secondary"> {{ post.number_of_likes }} </span>
                         </strong>
-
-
                     </div>
+                    <!-- End Post Likes Section -->
+
+                    <!-- Start Comments Count Section -->
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
+                    <!-- End Comments Count Section -->
                 </div>
             </div>
         </div>
@@ -72,6 +75,7 @@
             <hr>
         </div>
     </div>
+    <!-- Start Comments View Section-->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -90,6 +94,7 @@
                         {{ comment.body | linebreaks }}
                     </div>
 
+                    <!-- Start Comment Approval Check Section -->
                     {% if not comment.approved and comment.name == user.username %}
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
@@ -104,6 +109,8 @@
 
             </div>
         </div>
+
+        <!-- Start Comment Posting Section -->
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
 
@@ -121,7 +128,9 @@
 
             </div>
         </div>
+        <!-- End  Comment Posting Section -->
     </div>
+    <!-- End Comments View Section-->
 </div>
 
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -141,9 +150,5 @@
         </div>
     </div>
 </div>
-
-
-{% load static %}
-<script src="{% static '/js/comments.js' %}" crossorigin="anonymous"></script>
 
 {% endblock content %}
