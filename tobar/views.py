@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-# from map.models import Well
 from .models import Post
 from .forms import CommentForm
 from django.urls import reverse
@@ -105,4 +104,3 @@ def comment_edit(request, slug, comment_id, *args, **kwargs):
                                  'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-

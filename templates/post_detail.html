@@ -7,13 +7,10 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title | safe }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
@@ -23,6 +20,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">
@@ -75,7 +73,7 @@
             <hr>
         </div>
     </div>
-    <!-- Start Comments View Section-->
+    <!-- Start Comments View Section -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -130,9 +128,10 @@
         </div>
         <!-- End  Comment Posting Section -->
     </div>
-    <!-- End Comments View Section-->
+    <!-- End Comments View Section -->
 </div>
 
+<!-- Delete Comment Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -150,5 +149,9 @@
         </div>
     </div>
 </div>
+
+{% load static %}
+
+<script src="{% static '/js/comments.js' %}" crossorigin="anonymous"></script>
 
 {% endblock content %}
