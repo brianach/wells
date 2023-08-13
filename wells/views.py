@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
 
+def err400(request, exception):
+
+    return render(request, "errcodes/err400.html", status=400)
+
+
 def err403(request, exception):
 
     return render(request, "errcodes/err403.html", status=403)

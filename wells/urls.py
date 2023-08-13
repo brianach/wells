@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import err403, err404, err405,  err500
+from .views import err400, err403, err404, err405,  err500
 
 
 urlpatterns = [
@@ -13,6 +13,7 @@ urlpatterns = [
 ]
 
 # Custom error views
+handler400 = 'wells.views.err400'
 handler403 = 'wells.views.err403'
 handler404 = 'wells.views.err404'
 handler405 = 'wells.views.err405'
