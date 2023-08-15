@@ -95,16 +95,17 @@ User stories were created to aid in the planning of the site and for the agile t
 
 - As a staff user I can create location records so that markers will be available on the map
 - As a staff user I can create a post so that users can get information about a well
-- As a user I can read posts on the home page
-- As a user I can read an about page to get some background
-- As a user I can access a map page to see where wells are located
-- As a user I can click on a well marker to get more details
-- As a user I can click on the popup title to read more information
-- As a user I can click on a button in the popup to see the location and navigate to it in google maps
-- As a user I can register so that I can post comments
+- As a visitor I can read posts on the home page
+- As a visitor I can read an about page to get some background
+- As a visitor I can access a map page to see where wells are located
+- As a visitor I can click on a well marker to open a popup
+- As a visitor I can click on the popup title to read more information
+- As a visitor I can click on a button in the popup to see the location in google maps
+- As a user I can register on the site
 - As a user I can like or unlike posts
-- As a user I can add comments to well information pages
+- As a user I can add comments to information pages
 - As a site user I can edit or delete my own comments
+- As a staff user I can approve comments made by user
 
 ---
 
