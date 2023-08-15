@@ -1,8 +1,6 @@
-{% extends "base.html" %}{% block content %}
+{% extends "base.html" %}{% block content %}{% load static %}
 
 <link rel="stylesheet" href="/static/css/mapbox.css">
-
-{% load static %}
 
 <div class="map-content" id='map' data-wells="{{ wells }}"></div>
 

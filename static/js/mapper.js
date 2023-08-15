@@ -7,15 +7,6 @@ var map = new mapboxgl.Map({
     zoom: 9.5
 });
 
-// Add geolocate control to the map.
-map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: { enableHighAccuracy: true },
-    // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true,
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-    showUserHeading: true
-})
-);
 
 /* Load map and custom icons */
 
@@ -27,6 +18,18 @@ map.on('load', () => {
             if (error) throw error;
             map.addImage('custom-marker', image);
         }
+    );
+    // Set location tracking if allowed by user or device
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            // When active the map will receive updates to the device's location as it changes.
+            trackUserLocation: true,
+            // Draw an arrow next to the location dot to indicate which direction the device is heading.
+            showUserHeading: true
+        })
     );
 
     var mapElement = document.getElementById('map');
@@ -110,4 +113,6 @@ map.on('load', () => {
     map.on('mouseleave', 'points', function () {
         map.getCanvas().style.cursor = '';
     });
+
 });
+
