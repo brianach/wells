@@ -1,7 +1,8 @@
-body {
-    background-color: #F9FAFC;
+.box {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://res.cloudinary.com/dpii8ntba/image/upload/o_15/v1692190167/wells/water-art_gmtcxo.jpg");
 }
-
 
 .brand {
     font-family: Lato, sans-serif;
@@ -24,10 +25,6 @@ body {
 
 .dark-bg {
     background-color: #445261;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
 }
 
 .card {

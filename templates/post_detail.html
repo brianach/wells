@@ -6,11 +6,11 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-4 masthead-text">
                 <h1 class="post-title">{{ post.title | safe }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-none d-md-block col-md-8 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-
+<!-- Start Page Layout -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
