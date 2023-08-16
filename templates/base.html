@@ -21,9 +21,11 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg box">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white {% if map_page_class %}fixed-top{% endif %}">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span><img src='/static/img/well.png'>&nbsp &nbsp
+    <nav class="navbar navbar-expand-lg navbar-light {% if map_page_class %}fixed-top{% endif %}">
+        <div class="container-fluid nav-back">
+            <a class="navbar-brand" href="{% url 'home' %}"><span><img class="logo-img"
+                        src='https://res.cloudinary.com/dpii8ntba/image/upload/v1691921117/static/img/h_well.a764e690298f.png'>&nbsp
+                    &nbsp
                     Holy
                     Wells</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -32,9 +34,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!--<li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
@@ -58,9 +57,7 @@
                     {% endif %}
 
                 </ul>
-                <span class="navbar-text text-muted">
-                    the ancient wells of ireland
-                </span>
+                <span class="nav-text">the ancient wells of ireland</span>
             </div>
         </div>
     </nav>

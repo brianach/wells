@@ -1,7 +1,7 @@
 .box {
     background-position: center;
     background-size: cover;
-    background-image: url("https://res.cloudinary.com/dpii8ntba/image/upload/o_15/v1692190167/wells/water-art_gmtcxo.jpg");
+    background-image: url("https://res.cloudinary.com/dpii8ntba/image/upload/o_25/v1692201332/wells/pxfuel_2_p4j69n.jpg");
 }
 
 .brand {
@@ -87,6 +87,44 @@
     transform: skew(15deg);
     z-index: 100;
 }
+
+.logo-img {
+    filter: brightness(0) invert(1);
+}
+
+.navbar-light .navbar-toggler {
+    filter: brightness(0) invert(1);
+    border-color: #fff;
+}
+
+.navbar {
+    background-color: #445261;
+}
+
+.nav-back {
+    background-color: #445261;
+}
+
+.navbar-light .navbar-brand {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.nav-text {
+    color: #bbb;
+}
+
+.navbar-light .navbar-nav .nav-link.active>li>a:hover {
+    color: rgb(149, 227, 209);
+}
+
+/*
+.navbar-light .navbar-nav .nav-link.active:active {
+    color: rgb(190, 193, 168);
+}*/
 
 .post-link {
     text-decoration: none;

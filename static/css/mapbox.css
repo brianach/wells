@@ -1,5 +1,4 @@
 .mapboxgl-map {
-    top: 70px;
+    top: 60px;
     height: 100vh;
-    /*height: calc(var(--vh, 1vh) * 100);*/
 }
