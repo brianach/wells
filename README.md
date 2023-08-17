@@ -29,20 +29,20 @@ Each well record in the database includes the name of the well, the townland and
 - [Testing](#testing)
   - [User Stories](#user-stories)
   - [Desktop](#desktop)
-    - [Content Page](#content-page)
-    - [Comments](#comments)
+      - [Content Page](#content-page)
+      - [Comments](#comments)
     - [About Page](#about-page-1)
     - [Map Page](#map-page-1)
     - [Authentication](#authentication-1)
   - [Tablet](#tablet)
-    - [Content Page](#content-page-1)
-    - [Comments](#comments-1)
+      - [Content Page](#content-page-1)
+      - [Comments](#comments-1)
     - [About Page](#about-page-2)
     - [Map Page](#map-page-2)
     - [Authentication](#authentication-2)
   - [Mobile](#mobile)
-    - [Content Page](#content-page-2)
-    - [Comments](#comments-2)
+      - [Content Page](#content-page-2)
+      - [Comments](#comments-2)
     - [About Page](#about-page-3)
     - [Map Page](#map-page-3)
     - [Authentication](#authentication-3)
@@ -77,6 +77,12 @@ Users can register an account in order to comment on the information pages. Exis
 ---
 
 # Design
+
+The wells databases utilizes three main models with relationhis as shown in the following diagram.
+
+![ERD](/media/erd-tables.png)
+
+A well record must exist before a post is created as the post must be linked to the well name which is identical to the post title and slug. Once the post is saved the  *'townland'* and *'county'* fields are joined and saved as a single *'location'* field and *'cures'* are saved to the *'cures'* field in the post record.
 
 ## Home
 
