@@ -1,5 +1,4 @@
 # Wells
-
 ![Wells logo](static/img/well.png)
 
 Wells is a location enabled application dedicated to providing information and navigation directions to ancient water sources, latterly referred to as 'holy wells'.
@@ -30,20 +29,20 @@ Each well record in the database includes the name of the well, the townland and
 - [Testing](#testing)
   - [User Stories](#user-stories)
   - [Desktop](#desktop)
-      - [Content Page](#content-page)
-      - [Comments](#comments)
+    - [Content Page](#content-page)
+    - [Comments](#comments)
     - [About Page](#about-page-1)
     - [Map Page](#map-page-1)
     - [Authentication](#authentication-1)
   - [Tablet](#tablet)
-      - [Content Page](#content-page-1)
-      - [Comments](#comments-1)
+    - [Content Page](#content-page-1)
+    - [Comments](#comments-1)
     - [About Page](#about-page-2)
     - [Map Page](#map-page-2)
     - [Authentication](#authentication-2)
   - [Mobile](#mobile)
-      - [Content Page](#content-page-2)
-      - [Comments](#comments-2)
+    - [Content Page](#content-page-2)
+    - [Comments](#comments-2)
     - [About Page](#about-page-3)
     - [Map Page](#map-page-3)
     - [Authentication](#authentication-3)
@@ -123,6 +122,8 @@ Each user story has its own Agile task. In this way the implementation and the t
 </details>
 
 The following screenshots show the result of user actions on the various platforms. First we see the screenshots of various menu choices and internal content interactions for desktop or laptop devices, followed respectively by tablet devices and finally mobile phone devices. The testing indicates that content and pages are accessible on all formats.
+
+The styling has been slightly changed since the screenshots were taken. The page now uses the same background color for the navigation bar, post title masthead, comment submit & edit buttons, and for all the authentication buttons.
 
 &nbsp;
 
@@ -417,7 +418,7 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 
 ## Map Interaction
 
-The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it the python and javascript all ties together. The marker popup works in the same way on all devices and consists of three elements, Popup Title, Excerpt and a Google Maps Link to the loction.
+The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it(mapbbox), python and javascript all hangs together. The marker popup works in the same way on all devices and consists of three elements, Popup Title, Excerpt and a Google Maps Link to the loction.
 
 The popup title is becomes an active link when there a related content record in the database or a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in google maps'*</span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
 
@@ -448,6 +449,30 @@ The popup title is becomes an active link when there a related content record in
 
 # Technologies
 
+- [HTML5](https://en.wikipedia.org/wiki/HTML5): mark-up language.
+- [CSS3](https://en.wikipedia.org/wiki/CSS): styling.
+- [JavaScript](https://www.javascript.com/): programming language.
+- [Python 3](https://www.python.org/): programming language.
+- [Django 3.2](https://www.djangoproject.com/)
+  - [Django Crispy Forms](https://pypi.org/project/django-crispy-forms/): for forms.
+  - [Crispy Bootstrap5](https://pypi.org/project/crispy-bootstrap5/): bootstrap5 template pack for crispy forms.
+  - [Django Forms Dynamic](https://github.com/dabapps/django-forms-dynamic): for the dynamic form using HTMX.
+  - [Django Widget Tweaks](https://pypi.org/project/django-widget-tweaks/): for the dynamic form.
+  - [Coverage](https://github.com/nedbat/coveragepy/tree/6.5.0): for measuring code coverage of Python tests.
+
+- [Bootstrap](https://getbootstrap.com/): styling.
+- [Cloudinary](https://cloudinary.com/): store static and media files.
+- [GIT](https://git-scm.com/): for version control.
+- [GitHub](https://github.com/): for host repository.
+  
+- [Codeanywhere](https://codeanywhere.com/): online IDE.
+- [Heroku](:<https://codeanywhere.com/): PaaS deployment site
+- [Google Fonts](https://fonts.google.com/): to import fonts.
+- [Font Awesome](https://fontawesome.com/): to import icons.
+- [Balsamiq](https://balsamiq.com/): to create wireframes.
+- [Draw.io](https://www.drawio.com/): for Entity Relationship Diagram.
+- [GIMP](https://www.gimp.org/): to edit images and create colour palette.
+- [Inkscape](https://inkscape.org/): to create the logo.
 ---
 
 # Credits
