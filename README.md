@@ -21,9 +21,13 @@ Each well record in the database includes the name of the well, the townland and
   - [Map Page](#map-page)
   - [Authentication](#authentication)
 - [Design](#design)
+  - [DB Model](#database-model)
+  - [Color Scheme](#general-color-scheme)
+  - [Logo](#logo)
   - [Home](#home)
   - [About](#about)
   - [Map](#map)
+    - [Popup](#popups)
   - [User Authentication](#user-authentication)
 - [User Experience](#user-experience)
 - [Testing](#testing)
@@ -78,17 +82,65 @@ Users can register an account in order to comment on the information pages. Exis
 
 # Design
 
-The wells databases utilizes three main models with relationhis as shown in the following diagram.
+## Database Model
 
-![ERD](/media/erd-tables.png)
+The wells databases utilizes three main models with relationships as shown in the following diagram. I've included the builtin Djano User model to showits relationships to the three models.
 
-A well record must exist before a post is created as the post must be linked to the well name which is identical to the post title and slug. Once the post is saved the  *'townland'* and *'county'* fields are joined and saved as a single *'location'* field and *'cures'* are saved to the *'cures'* field in the post record.
+<details>
+<summary>ERM</summary>
+
+![ERM](/media/erm.png)
+
+</details>
+
+A well record must exist before a post can be created. When the post is saved, the well's *'townland'* and *'county'* fields are joined and saved as a single *'location'* field in the post, and the well's *'cures'* field is saved to the *'cures'* field in the post record.
+
+## General Color Scheme
+
+I used a very simple color scheme almost verging on black & white for simplicity and good color contrast. The navbar, footer, button elements and poat body text all use a charcoal colour while white is used for logos, icons, elements and text whcih have charcoal backgrounds.
+
+<details>
+<summary>Color Scheme</summary>
+
+![Color Scheme](/media/color-scheme.png)
+
+</details>
+
+## Logo
+
+The logo uses a water droplet and a celtic spiral which I tilted horizontally to give the impression of water ripples. 
 
 ## Home
 
+I used the same basic layout as CI's "I think therefore I blog" tutorial with a slight alteration to the color pallet.
+
+<details>
+
+<summary>Homepage Laptop Mockup</summary>
+
+![Homepage Laptop Mockup](/media/lap/homepage-large-mockup.png)
+
+</details>
+
+<details>
+
+<summary>Mobile Laptop Mockup</summary>
+
+![Homepage Mobile Mockup](/media/mob/mobile-homepage-mockup.png)
+
+</details>
+
 ## About
 
+Again simplicty is the order of the day for the about page which contains a single large image and information under a number of headings relating to the holy wells in general. 
+
 ## Map
+
+The map uses the same page tempalate for the navigation bar and footer as the above mentioned pages but I opted to lock the footer so that it would remain in place while scrolling the map downwards. I used my logo for the markers for well locations.
+
+### Popup
+
+The popup uses the Mapbox popup element and I created a popup template which loads once the popup is clicked. My logo is used once again and the popup has a title matching the well name whcih becomes a link if there is a related post for that well. Below that is an excerpt from that post if it exists and at the bottom a button which opens the location in Google maps using the well's coordinates. More information relating to the map and popup functionality is contained in the [notes](#notes).
 
 ## User Authentication
 
@@ -475,10 +527,9 @@ The popup title is becomes an active link when there a related content record in
 - [Heroku](:<https://codeanywhere.com/): PaaS deployment site
 - [Google Fonts](https://fonts.google.com/): to import fonts.
 - [Font Awesome](https://fontawesome.com/): to import icons.
-- [Balsamiq](https://balsamiq.com/): to create wireframes.
-- [Draw.io](https://www.drawio.com/): for Entity Relationship Diagram.
-- [GIMP](https://www.gimp.org/): to edit images and create colour palette.
-- [Inkscape](https://inkscape.org/): to create the logo.
+- [Lucidchart](https://www.drawio.com/): for the mockups and ERM.
+- [GIMP](https://www.gimp.org/): to create the logo
+
 ---
 
 # Credits
