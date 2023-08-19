@@ -2,6 +2,7 @@
 
 {% load crispy_forms_tags %}
 
+<!-- Start Page Layout -->
 
 <div class="masthead">
     <div class="container">
@@ -22,7 +23,6 @@
     </div>
 </div>
 
-<!-- Start Page Layout -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
@@ -30,9 +30,9 @@
 
                 <p> Location: {{ location }}</p>
 
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
+                <!--<p class="card-text ">-->
+                {{ post.content | safe }}
+                <!--</p>-->
 
                 <div class="row">
                     <!-- Start Post Likes Section -->

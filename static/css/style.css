@@ -78,9 +78,12 @@
 }
 
 .masthead-image {
-    width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+.masthead img {
+    width: 100%;
 }
 
 .masthead-image:after {
