@@ -9,3 +9,6 @@ node_modules/
 cloudinary_python.txt
 README.md
 media/docs/
+.coverage
+db.sqlite3
+
