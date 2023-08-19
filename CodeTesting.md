@@ -66,7 +66,7 @@ Two identical errors were generated in the each of the error page template but u
 <details>
 <summary>Home Page</summary>
 
-![Home Page](/media/testing/home.png)
+![Home Page](/media/testing/html/home.png)
 </details>
 
 ### Post Details
@@ -74,7 +74,7 @@ Two identical errors were generated in the each of the error page template but u
 <details>
 <summary>Post Details</summary>
 
-![Post Details](/media/testing/post_detail.png)
+![Post Details](/media/testing/html/post_detail.png)
 </details>
 
 ## About
@@ -82,7 +82,7 @@ Two identical errors were generated in the each of the error page template but u
 <details>
 <summary>About Page</summary>
 
-![About Page](/media/testing/about.png)
+![About Page](/media/testing/html/about.png)
 </details>
 
 ## Map
@@ -90,7 +90,7 @@ Two identical errors were generated in the each of the error page template but u
 <details>
 <summary>Map Page</summary>
 
-![Map Page](/media/testing/map.png)
+![Map Page](/media/testing/html/map.png)
 </details>
 
 ### Popup
@@ -98,7 +98,7 @@ Two identical errors were generated in the each of the error page template but u
 <details>
 <summary>Location Popup</summary>
 
-![Popup](/media/testing/popup.png)
+![Popup](/media/testing/html/popup.png)
 </details>
 
 One warning for the popup template.
@@ -116,3 +116,9 @@ All CSS pages passed the W3C CSS Validation Service
 ## JavaScript Testing
 
 JSHint was used for validating the JavaScript. 
+
+## [Python Testing](https://extendsclass.com/python-tester.html)
+
+ExtendsClass was used to validate the python code. Two errors were reported out of all the code. However the errors are due to the checker running an older version of Python which doesn't support f-strings.
+
+![reported error](/media/testing/tobar_admin.png)
