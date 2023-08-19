@@ -15,7 +15,7 @@
                 <img src="https://res.cloudinary.com/dpii8ntba/image/upload/v1692181666/wells/water-drop_hftgkd.jpg"
                     alt="Water drop with ripples">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" alt="Image featuring " {{ post.title }}>
+                <img src="{{ post.featured_image.url }}" alt="Image featuring {{ post.title }}">
                 {% endif %}
             </div>
         </div>
