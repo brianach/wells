@@ -1,31 +1,42 @@
-<link rel="stylesheet" href="/static/css/popup.css">
+<!DOCTYPE html>
+<html class="h-100" lang="en">
 
-<!-- Location data -->
-<div data-tap-disabled="false" id="well-popup" class="popup-wrapper">
-    <div class="popup">
-        <div class="popup-content">
-            <img src="/static/img/h_well.png"></img>
-            <hr>
+<head>
+    <title>Popup</title>
 
-            {% load static %}
+<body>
+    <link rel="stylesheet" href="/static/css/popup.css">
 
-            <h5><a href="{{ post_url }}" target="_blank" rel="noopener" id="post_url">{{ title }}</a></h5>
+    <!-- Location data -->
+    <div data-tap-disabled="false" id="well-popup" class="popup-wrapper">
+        <div class="popup">
+            <div class="popup-content">
+                <img src="/static/img/h_well.png"></img>
+                <hr>
 
-            <div>
-                <p class="excerpt-textbox">{{ excerpt }}</p>
+                {% load static %}
+
+                <h5><a href="{{ post_url }}" target="_blank" rel="noopener" id="post_url">{{ title }}</a></h5>
+
+                <div>
+                    <p class="excerpt-textbox">{{ excerpt }}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Google Maps Button  -->
-<div class="button-box">
-    <button>
-        <a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Open location in
-            Google Maps
-            &nbsp<i class="fa fa-location-arrow"></i></a>
-    </button>
-</div>
+    <!-- Google Maps Button  -->
+    <div class="button-box">
+        <button>
+            <a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Open location in
+                Google Maps
+                &nbsp<i class="fa fa-location-arrow"></i></a>
+        </button>
+    </div>
 
-<!-- font awesome script -->
-<script src="https://kit.fontawesome.com/559cadc1ae.js" crossorigin="anonymous"></script>
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/559cadc1ae.js" crossorigin="anonymous"></script>
+</body>
+</head>
+
+</html>
