@@ -3,6 +3,7 @@
 
 <head>
     <title>Popup</title>
+</head>
 
 <body>
     <link rel="stylesheet" href="/static/css/popup.css">
@@ -11,7 +12,7 @@
     <div data-tap-disabled="false" id="well-popup" class="popup-wrapper">
         <div class="popup">
             <div class="popup-content">
-                <img src="/static/img/h_well.png"></img>
+                <img src="/static/img/h_well.png" alt="wells logo">
                 <hr>
 
                 {% load static %}
@@ -28,15 +29,19 @@
     <!-- Google Maps Button  -->
     <div class="button-box">
         <button>
-            <a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Open location in
-                Google Maps
-                &nbsp<i class="fa fa-location-arrow"></i></a>
+            <script type="text/javascript">
+                function goGoogleMaps() {
+                    window.open('http://www.google.com/maps/place/', '_blank');
+                }
+            </script>
+            Openlocation in Google Maps &nbsp;<i class='fa fa-location-arrow'></i>
+            <!--<a href="http://www.google.com/maps/place/{{ coordinates }}" target="_blank" rel="noopener">Open location in
+                Google Maps &nbsp;<i class="fa fa-location-arrow"></i></a>-->
         </button>
     </div>
 
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/559cadc1ae.js" crossorigin="anonymous"></script>
 </body>
-</head>
 
 </html>
