@@ -44,16 +44,12 @@ def mapper(request):
 
 
 def popup(request):
+    # Define the popup view
     title = request.GET.get('title')
     post_slug = request.GET.get('post_slug')
     excerpt = request.GET.get('excerpt')
     coordinates = request.GET.get('coordinates')
     post_url = reverse('post_detail', args=[post_slug])
-
-    # if post_slug != 'undefined':
-    #    post_url = reverse('post_detail', args=[post_slug])
-    # else:
-    #    post_url = '#'
 
     data = {
         'title': title,

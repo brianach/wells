@@ -84,7 +84,7 @@ Users can register an account in order to comment on the information pages. Exis
 
 ## Database Model
 
-The wells databases utilizes three main models with relationships as shown in the following diagram. I've included the builtin Djano User model to showits relationships to the three models.
+The wells databases utilizes three main models with relationships as shown in the following diagram. I've included the builtin Djano User model to show its relationships to the three models.
 
 <details>
 <summary>ERM</summary>
@@ -108,7 +108,7 @@ I used a very simple color scheme almost verging on black & white for simplicity
 
 ## Logo
 
-The logo uses a water droplet and a celtic spiral which I tilted horizontally to give the impression of water ripples. 
+The logo is made up of a water droplet and a celtic spiral. I tilted the spiral horizontally to give the impression of water ripples. 
 
 ## Home
 
@@ -140,7 +140,7 @@ The map uses the same page tempalate for the navigation bar and footer as the ab
 
 ### Popup
 
-The popup uses the Mapbox popup element and I created a popup template which loads once the popup is clicked. My logo is used once again and the popup has a title matching the well name whcih becomes a link if there is a related post for that well. Below that is an excerpt from that post if it exists and at the bottom a button which opens the location in Google maps using the well's coordinates. More information relating to the map and popup functionality is contained in the [notes](#notes).
+The popup uses the Mapbox popup element and I created a popup template which loads once the popup is clicked. My logo is used once again and the popup has a title matching the well name which becomes a link if there is a related post for that well. Below that is an excerpt from that post if it exists and at the bottom a button which opens the location in Google maps using the well's coordinates. More information relating to the map and popup functionality is contained in the [notes](#notes).
 
 ## User Authentication
 
@@ -477,9 +477,6 @@ Once in the content page a user may post, edit and delete their own comments. Wh
 ## Map Interaction
 
 The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it(mapbbox), python and javascript all hangs together. The marker popup works in the same way on all devices and consists of three elements, Popup Title, Excerpt and a Google Maps Link to the loction.
-
-The popup title is becomes an active link when there a related content record in the database or a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in google maps'*</span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
-
 <details>
 <summary>Popup Title</summary>
 
@@ -487,12 +484,16 @@ The popup title is becomes an active link when there a related content record in
 
 </details>
 
+The popup title becomes an active link when there is a related content record in the database. Otherwise it is a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot. 
+
 <details>
 <summary>Google Map Link</summary>
 
 ![Home](media/lap/popup-lnk2.png)
 
 </details>
+
+By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in google maps'*</span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
 
 <details>
 <summary>Google Map Window</summary>
@@ -543,7 +544,7 @@ The popup title is becomes an active link when there a related content record in
 ## Map Popup Dialog
 
 
-The map page is created using the 'map.html' template. Markers are placed on the map by the JSON data sent from the 'map.mapper' view which generates the data from the Well and related Post model records. When a marker is clicked the relevant variables are passed back to the 'map.popup' view which in turn generates the data for the popup dialog. The JS line in 'mapper.js' which passes the marker details is:
+The map page is created using the 'map.html' template. Markers are placed on the map by the JSON data sent from the 'map.mapper' view which generates the data from the Well and related Post model records. When a marker is clicked, the relevant variables are passed back to the 'map.popup' view which in turn generates the data for the popup dialog. The JS line in 'mapper.js' which passes the marker details is:
 
     var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
 

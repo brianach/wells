@@ -121,11 +121,6 @@
     color: rgb(149, 227, 209);
 }
 
-/*
-.navbar-light .navbar-nav .nav-link.active:active {
-    color: rgb(190, 193, 168);
-}*/
-
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -238,7 +233,6 @@
 .modal-header button {
     border: none;
 }
-
 
 .check-auth button {
     display: inline-block;

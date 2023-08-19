@@ -44,14 +44,13 @@ map.on('load', () => {
         },
     });
 
-    // Add a symbol layer
+    // Add a symbol layer (location markers)
     map.addLayer({
         'id': 'points',
         'type': 'symbol',
         'source': 'points',
         'layout': {
             'icon-image': 'custom-marker',
-            //'text-field': ['get', 'well'],
             'text-field': ['get', 'title'],
             'text-font': [
                 'Open Sans Semibold',
@@ -61,13 +60,13 @@ map.on('load', () => {
             'text-anchor': 'top'
         },
         'paint': {
-            'text-color': '#000000' // Set the text color (black in this case)
+            'text-color': '#000000' 
         }
     });
 
     // Load popup when location clicked
     map.on('click', 'points', function (e) {
-
+        // construct the popup data
         var title = e.features[0].properties.title;
         var excerpt = e.features[0].properties.post_excerpt.replace(/[\[\]""]/g, '');
         if (excerpt == '') {
@@ -82,13 +81,15 @@ map.on('load', () => {
         var url = 'popup?title=' + encodeURIComponent(title) + '&post_slug=' + encodeURIComponent(post_slug) + '&excerpt=' + encodeURIComponent(excerpt) + '&coordinates=' + encodeURIComponent(r_coordinates.map(coord => Math.ceil(coord * 100000) / 100000).join(','));
         var xhr = new XMLHttpRequest();
 
+        // send the get request containing the url variable to the server 
         xhr.open('GET', url);
         xhr.onload = function () {
             if (xhr.status === 200) {
                 var data = xhr.responseText;
+                // data contains the entire popup template and the relevant data
                 new mapboxgl.Popup().setLngLat(coordinates).setHTML(data).addTo(map);
 
-                if (post_slug == 'undefined') { //remove link if undefined
+                if (post_slug == 'undefined') { //remove link from title if undefined
                     var popupElement = document.querySelector('.mapboxgl-popup-content');
                     var myUrlElement = popupElement.querySelector('#post_url');
                     if (myUrlElement) {
@@ -104,15 +105,14 @@ map.on('load', () => {
         xhr.send();
     });
 
-    // Change the cursor to a pointer when over point
+    // Change the cursor to a pointer when over marker
     map.on('mouseenter', 'points', function () {
         map.getCanvas().style.cursor = 'pointer';
     });
 
-    // Change it back to a pointer after leaving point
+    // Change it back to a pointer after leaving marker
     map.on('mouseleave', 'points', function () {
         map.getCanvas().style.cursor = '';
     });
 
 });
-

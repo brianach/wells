@@ -1,3 +1,4 @@
+// taken from https://github.com/Code-Institute-Solutions/PP4_masterclass/blob/main/static/js/comments.js
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 var deleteButtons = document.getElementsByClassName("btn-delete");
 var editButtons = document.getElementsByClassName("btn-edit");
@@ -6,9 +7,6 @@ var commentText = document.getElementsByTagName("textarea")[0];
 var commentForm = document.getElementById("commentForm");
 var submitButton = document.getElementById("submitButton");
 
-// empty the comment text after post
-
-//commentText.value = "";
 
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
