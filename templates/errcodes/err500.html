@@ -1,13 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>500</title>
+</head>
+
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-6 my-auto form-container text-center rounded mx-auto my-2 py-2">
+        <div class="col-md-12 my-auto form-container text-center rounded mx-auto my-2 py-2">
             <h1>Error 500: Internal Server Error.</h1>
             <div>
-                <img src="{% static 'img/system-failure.jpg' %}">
+                <img src="{% static 'img/system-failure.jpg' %}" alt="system-failure image">
             </div>
             <div>
                 <a href="{% url 'home' %}" class="btn btn-warning">
@@ -18,5 +25,6 @@
     </div>
 </div>
 
-
 {% endblock %}
+
+</html>

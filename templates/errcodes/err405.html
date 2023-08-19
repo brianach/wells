@@ -1,14 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>405</title>
+</head>
+
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-6 my-auto form-container text-center rounded mx-auto my-2 py-2">
+        <div class="col-md-12 my-auto form-container text-center rounded mx-auto my-2 py-2">
             <h1>Error 405: Method Not Allowed</h1>
             <h2>Sadly the server doesn't allow this action!</h2>
             <div>
-                <img src="{% static 'img/error.png' %}">
+                <img src="{% static 'img/error.png' %}" alt="error image">
             </div>
             <div>
                 <a href="{% url 'home' %}" class="btn warning">
@@ -20,3 +27,5 @@
 </div>
 
 {% endblock %}
+
+</html>

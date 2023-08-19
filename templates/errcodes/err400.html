@@ -1,15 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>400</title>
+</head>
+
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-6 my-auto form-container text-center rounded mx-auto my-2 py-2">
+        <div class="col-md-12 my-auto form-container text-center rounded mx-auto my-2 py-2">
             <h1>Error 400: Bad request</h1>
             <h2>The server doesn't like this request !</h2>
             <div>
-                <img src="{% static 'img/error.png' %}" />
+                <img src="{% static 'img/error.png' %}" alt="error image">
             </div>
             <div>
                 <a href="{% url 'home' %}" class="btn warning">
-                    Please click here to retrun to the home page.
+                    Please click here to return to the home page.
                 </a>
             </div>
         </div>
@@ -17,3 +24,5 @@
 </div>
 
 {% endblock %}
+
+</html>
