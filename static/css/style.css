@@ -1,3 +1,7 @@
+.about-img {
+    width: 100%;
+}
+
 .box {
     background-position: center;
     background-size: cover;
@@ -54,6 +58,10 @@
     text-transform: uppercase;
 }
 
+.logo-img {
+    filter: brightness(0) invert(1);
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -70,6 +78,7 @@
 }
 
 .masthead-image {
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -86,10 +95,6 @@
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
-
-.logo-img {
-    filter: brightness(0) invert(1);
 }
 
 .navbar-light .navbar-toggler {

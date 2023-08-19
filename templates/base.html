@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lng="en">
 
 <head>
     <title>Holy Wells</title>
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -24,10 +24,8 @@
     <nav class="navbar navbar-expand-lg navbar-light {% if map_page_class %}fixed-top{% endif %}">
         <div class="container-fluid nav-back">
             <a class="navbar-brand" href="{% url 'home' %}"><span><img class="logo-img"
-                        src='https://res.cloudinary.com/dpii8ntba/image/upload/v1691921117/static/img/h_well.a764e690298f.png'>&nbsp
-                    &nbsp
-                    Holy
-                    Wells</span></a>
+                        src='https://res.cloudinary.com/dpii8ntba/image/upload/v1691921117/static/img/h_well.a764e690298f.png'
+                        alt="Wells Logo Image">&nbsp; &nbsp; Holy Wells</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -101,7 +99,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-2 dark-bg {% if map_page_class %}fixed-bottom{% endif %}">
-        <p class="m-0 text-center text-white">Well Wishers Collective &nbsp&nbsp&nbsp&nbsp&nbsp<i
+        <p class="m-0 text-center text-white">Well Wishers Collective &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                 class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
