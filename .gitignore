@@ -8,7 +8,8 @@ node_modules/
 .github/
 cloudinary_python.txt
 README.md
-media/docs/
+media/
 .coverage
 db.sqlite3
-
+htmlcov/
+CodeTesting.md
