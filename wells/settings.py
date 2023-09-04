@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-brianach-wells-gb74kpfvrl.us2.codeanyapp.com',
-                 'tobar-c8c7dcc15408.herokuapp.com']
+                 'wells-too-f6ff395871f9.herokuapp.com']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
