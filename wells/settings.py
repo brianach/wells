@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-brianach-wells-blwm5a24fm.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-brianach-wells-gb74kpfvrl.us2.codeanyapp.com',
                  'tobar-c8c7dcc15408.herokuapp.com']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -139,7 +139,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

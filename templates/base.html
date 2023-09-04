@@ -6,6 +6,9 @@
 <head>
     <title>Holy Wells</title>
 
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
@@ -21,9 +24,9 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg box">
-    <nav class="navbar navbar-expand-lg navbar-light {% if map_page_class %}fixed-top{% endif %}">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid nav-back">
-            <a class="navbar-brand" href="{% url 'home' %}"><span><img class="logo-img"
+            <a class="navbar-brand" href="/"><span><img class="logo-img"
                         src='https://res.cloudinary.com/dpii8ntba/image/upload/v1691921117/static/img/h_well.a764e690298f.png'
                         alt="Wells Logo Image">&nbsp; &nbsp; Wells Home</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
